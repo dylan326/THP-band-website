@@ -1,88 +1,57 @@
 <html>
-    <head>
-        <title>Gallery</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="shortcut icon" href="alien.ico" />
-    </head>
-    <div class="homebody"><body>
-        <center><div class="pgselect">
-        <a href="index.html"><b>HOME</b></a>
-       
-        
-       <a href="media.html"><b>MEDIA</b></a>
-       
-        <img src="thplogo2.jpg" style="height:75px; width: 75px;">
-      
-        <a href="gallery.html"><b>GALLERY</b></a>
-     
-        <a href="contact.html"><b>CONTACT</b></a>
-        
-        
-    </div></center>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="alien.ico" />
+</head>
+<div class="homebody">
     
 <body>
+<center>
+<div class="pgselect">
+    <a href="index.html"><b>HOME</b></a>
+    <a href="media.html"><b>MEDIA</b></a>
+    <img src="thplogo2.jpg" style="height:75px; width: 75px;">
+    <a href="gallery.html"><b>GALLERY</b></a>
+    <a href="contact.html"><b>CONTACT</b></a>
+</div>
+</center>
 
-<hr>
-<hr>
-<br/>
-<br/>
-
-<br/>
-
-
-
+<hr><hr>
+<br/><br/><br/>
 
 <div class="slideshow-container">
-
 <div class="mySlides fade">
-  
   <img src="downloadc.png" >
   <div class="text">Chris Lejuez - Lead Guitar</div>
 </div>
-
 <div class="mySlides fade">
-
-  <img src="downloadj.png" >
-
-
-  <div class="text">Justin Lieberthal - Bass</div>
+   <img src="downloadj.png" >
+<div class="text">Justin Lieberthal - Bass</div>
 </div>
-
 <div class="mySlides fade">
-  
   <img src="downloadd.png" >
   <div class="text">Dylan Oldham - Lead Guitar</div>
 </div>
-
 <div class="mySlides fade">
-  
   <img src="downloadt.png" >
   <div class="text">Tomoyuki Hasebe - Drums</div>
 </div>
 
 <div class="mySlides fade">
- 
   <img src="downloadarlene.png" >
   <div class="text">Live at Arlene''s Grocery</div>
 </div>
 
 <div class="mySlides fade">
-
   <img src="downloaddr.png" >
   <div class="text">Live at DROM</div>
-  
 </div>
-
-
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-
-
-</div>
-<br>
-
+</div><br>
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
@@ -91,38 +60,47 @@
   <span class="dot" onclick="currentSlide(5)"></span> 
   <span class="dot" onclick="currentSlide(6)"></span> 
 </div>
-<br/>
-<br/>
-
-
+<br/><br/>
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+   var slideIndex = 1;
+   showSlides(slideIndex);
+   function plusSlides(n)
+   {
+      showSlides(slideIndex += n);
+    }
+   function currentSlide(n)
+   {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) 
+    {
+       var i;
+       var slides = document.getElementsByClassName("mySlides");
+       var dots = document.getElementsByClassName("dot");
+       if (n > slides.length) 
+       {
+           slideIndex = 1
+           
+       }    
+       if (n < 1) 
+       {
+           slideIndex = slides.length;
+       }
+           for (i = 0; i < slides.length; i++) 
+           {
+                 slides[i].style.display = "none";  
+            }
+           for (i = 0; i < dots.length; i++) 
+           {
+                 dots[i].className = dots[i].className.replace(" active", "");
+            }
+           slides[slideIndex-1].style.display = "block";  
+           dots[slideIndex-1].className += " active";
+        }
 </script>
 
 </body>
 </html>
+
+
+
