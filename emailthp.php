@@ -1,25 +1,21 @@
 <?php
-
-
-//Email information
-
+$to      = 'thehorizonproblem@gmail.com';
+$subject = 'New Message from thehorizonproblem.com';
+$message = $_POST['comments'];
 $name = $_POST['name'];
 $email = $_POST['email'];
-$comments = $_POST['comments'];
-$subject = "You have a new message from thehorizonproplem.com!";
+$headers = 'From '.$name.' Reply-To:'." ". $email;
 
-//send email
-$result = mail("dylanoldham326@gmail.com", "New Message from thehorizonproblem.com", $comments);
+$result = mail($to, $subject, $message, $headers);
 
-//Email response
-if($result == true){
+if($result == true)
+{
   header("refresh:3; url=index.html");
-  echo "Thank you your email has been sent.  Re-directing to home page";
-  }
-else {
-
-header("refresh:3; url=index.html");
-echo "Email did not go through.  Re-directing to home page....";
-
+  echo "Message sent.  Thank you, re-directing to home page....";
+}
+else
+{
+   header("refresh:3; url=index.html");
+   echo "Error in message, sorry. re-directing to home page....";
 }
 ?>
